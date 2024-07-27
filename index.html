@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         body {
             background-color: rgb(238, 232, 232);
@@ -36,13 +37,27 @@
             text-align: left;
             padding: 20px;
         }
-
-        .text1 {
-            text-align: left;
-            padding: 20px;
-            margin-bottom: auto;
-            border-radius: 2px #000 solid;
-
+        .tentip{
+            background-color: burlywood;
+            font-size: 20px;
+        }
+        #bmi-table {
+            width: 80;
+            height: 200px;
+            background-color: aquamarine;
+            margin:0 auto;
+        }
+        #bmi-table thead{
+            background-color: rgb(177, 93, 93);
+            color:aliceblue;
+        }
+        #bmi-table th{
+            font-size: 12px;
+            font-weight: lighter;
+        }
+        #bmi-table tbody{
+            background-color: darkolivegreen;
+            font-size: 0.8;
         }
 
         /* .==class #代表id 1em==16 */
@@ -51,6 +66,7 @@
 <!---內容顯示區--->
 
 <body>
+    
     <div id="title">我愛健身網站</div> <!--;分號在屬性作分隔-->
     <!-- <h2>標題2</h2> -->
     <div style="background-color: antiquewhite;color: #361919;">
@@ -60,7 +76,7 @@
         <p>除了塑造好身材，透過健身可以刺激我們身體的肌肉，再搭配飲食的控制，這能大大幫助我們的肌肉量增加，以及讓我們的肌肉更加的結實。
             <em style="color: black;">
                 如果你對健身仍然保持著懷疑的態度，那你大可以去看看你喜歡的健身老戲骨幹，他們是如何做到年過50/60歲，依舊在
-                舞臺上或者是電影螢幕上綻放光彩。</em> <u><b>答案就是堅持運動健身!
+                舞臺上或者是電影螢幕上綻放光彩。</em> <u><b>sp答案就是堅持運動健身!
         </p>
         </u></b>
     </div>
@@ -105,7 +121,7 @@
     <h2>
         一天卡路里
     </h2>
-    <table border="1">
+    <table border="1" id="'bmi-table">
         <thead>
             <tr>
                 <th>每天活動量</th>
