@@ -6,18 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .banner {
-            color: rgb(207, 215, 223);
-            background-color: rgb(87, 130, 211);
+        body {
+            background-color: rgb(238, 232, 232);
+            font-family: '微軟正黑體', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
         }
 
-        /* .==class */
+        .banner {
+            width: 200px;
+            display: inline-block;
+            color: rgb(207, 215, 223);
+            background-color: rgb(87, 130, 211);
+            margin: 12px 24px;
+            padding: 6px 22px;
+        }
+
+        #title {
+            width: 200px;
+            color: #2c2828;
+            background-color: aliceblue;
+            font-size: 48px;
+            margin: 20px 12px;
+            margin: 12px;
+            padding: 30px;
+
+        }
+
+        .text {
+            text-align: left;
+            padding: 20px;
+        }
+
+        .text1 {
+            text-align: left;
+            padding: 20px;
+            margin-bottom: auto;
+            border-radius: 2px #000 solid;
+
+        }
+
+        /* .==class #代表id 1em==16 */
     </style>
 </head>
 <!---內容顯示區--->
 
 <body>
-    <h1 style="color: rgb(184, 94, 20);background-color: antiquewhite;">我愛健身網站</h1> <!--;分號在屬性作分隔-->
+    <div id="title">我愛健身網站</div> <!--;分號在屬性作分隔-->
     <!-- <h2>標題2</h2> -->
     <div style="background-color: antiquewhite;color: #361919;">
         <p> <b>
@@ -35,30 +69,27 @@
         <img src="https://s.yimg.com/ny/api/res/1.2/_oupnY4AHiBc8JBjPj_4IA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTUwNDtjZj13ZWJw/https://media.zenfs.com/en/medical_inspire_725/312bda4b0dcdb83bb1b821e8a9569141"
             alt="來自運動101" width="100%">
     </a>
-    <h2 class="banner">健身的10個好處</h2>
-    <ul type="1">
-        <li>增加基礎代謝率</li>
-        <li>預防疾病和提高免疫力</li>
-        <li>改善心情</li>
-        <li>增加自信</li>
-        <li>增強記憶力</li>
-        <li>增強心肺能力</li>
-        <li>提升睡眠品質</li>
-
-
-
-
-    </ul>
-    <ol type="1">
-        <li>增加基礎代謝率</li>
-        <li>預防疾病和提高免疫力</li>
-        <li>改善心情</li>
-        <li>增加自信</li>
-        <li>增強記憶力</li>
-        <li>增強心肺能力</li>
-        <li>提升睡眠品質</li>
-    </ol>
-
+    <div class="banner">健身的10個好處</div>
+    <div class="text">
+        <ul type="1">
+            <li>增加基礎代謝率</li>
+            <li>預防疾病和提高免疫力</li>
+            <li>改善心情</li>
+            <li>增加自信</li>
+            <li>增強記憶力</li>
+            <li>增強心肺能力</li>
+            <li>提升睡眠品質</li>
+        </ul>
+        <ol type="1">
+            <li>增加基礎代謝率</li>
+            <li>預防疾病和提高免疫力</li>
+            <li>改善心情</li>
+            <li>增加自信</li>
+            <li>增強記憶力</li>
+            <li>增強心肺能力</li>
+            <li>提升睡眠品質</li>
+        </ol>
+    </div>
     <h2 class="banner">好文分享</h2>
     <ol>
         <a target='_blank'
@@ -113,22 +144,22 @@
     </p>
     <hr>
     <h2> 健身影片</h2>
+    <div>
+        <iframe width="32%" height="300px" src="https://www.youtube.com/embed/Eg9uptLfDjk"
+            title="【我家的熊孩子】金鍾國健身狂遇到兩位健美先生   竟還能把人家操到沒力氣哀求休息" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="32%" height="300px" src="https://www.youtube.com/embed/bvK-85V5lvc"
+            title="【金鍾國】SJ健身狂東海遇金鍾國一樣被操到虛脫!   連PD都看傻眼「很難相信你們是歌手」" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="32%" height="300px" src="https://www.youtube.com/embed/RL_ly_U_jog"
+            title="육아가 이렇게 힘듭니다.. (Feat. 딘딘)" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    <iframe width="32%" height="300px" src="https://www.youtube.com/embed/Eg9uptLfDjk"
-        title="【我家的熊孩子】金鍾國健身狂遇到兩位健美先生   竟還能把人家操到沒力氣哀求休息" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="32%" height="300px" src="https://www.youtube.com/embed/bvK-85V5lvc"
-        title="【金鍾國】SJ健身狂東海遇金鍾國一樣被操到虛脫!   連PD都看傻眼「很難相信你們是歌手」" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe width="32%" height="300px" src="https://www.youtube.com/embed/RL_ly_U_jog" title="육아가 이렇게 힘듭니다.. (Feat. 딘딘)"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <video width="100%" src="video/6003990_Man_African American_1280x720.mp4" controls> </video>
-
+        <video width="100%" src="video/6003990_Man_African American_1280x720.mp4" controls> </video>
+    </div>
 
 
 
