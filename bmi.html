@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
-    form {
+    #bmi-form {
         background-color: rgb(119, 153, 147);
         width: 30%;
         margin: 0 auto;
@@ -32,7 +32,7 @@
     }
 
     @media screen and (max-width:768px) {
-        form {
+        #bmi-form {
             width: 50%
         }
 
@@ -42,7 +42,7 @@
     }
 
     @media screen and (max-width:368px) {
-        form {
+        #bmi-form {
             width: 90%
         }
 
@@ -50,7 +50,7 @@
     }
 
     @media screen and (max-width:180px) {
-        form {
+        #bmi-form {
             width: 300%
         }
     }
@@ -58,7 +58,8 @@
 
 <body>
     <div>BMI 計算機<div>
-            <form type="text">
+            <div id="bmi-form">
+
                 <label for="username">姓名</label>
                 <input name="username" id='username' type="text" placeholder="Hank"><br>
                 <label for="password">密碼</label>
@@ -70,20 +71,68 @@
                 <label for="userweight">體重</label>
                 <input name="userweight" step="0.5" id='userweight' type="number" value="85"><br>
                 <!-- <input name="date" type="date"> 記住帳號 -->
-                <p><button>計算</button></p>
-
-
-
-
-
-
-
-
-
-
+                <p><button onclick="">計算</button></p>
+            </div>
             </form>
             <!-- 加入回上一頁 -->
             <a href="index.html">回到首頁</a>
+            <p id="result">BMI : </p>
+            <script>
+
+                function calcBMI() {
+
+                    // 計算BMI   
+                    let bmi = weightE1.value / (heightE1.value / 100) ** 2;
+                    // isNaN 提示輸入不正確
+                    if (isNaN(bmi)) {
+                        resultE1.innerHTML = `<h1 style="color:red" >輸入不正確</h1>`
+                        return;
+
+                    }
+
+                }
+                if (isNaN(bmi)) {
+                    resultE1.innerHTML = '<h1 style="color:blue"> 輸入不能為空白 </h1>`;
+                }
+                else {
+                    resultE1.innerHTML = `< h1 > BMI: ${bmi.toFixed(2)}</h1 >`;
+                    //   增加評語
+                    let comment = '體重過輕';
+                    if (bmi < 18.5) {
+                        comment = '體重過輕';
+                        color = "green";
+
+                    } else if (bmi < 24) {
+                        comment = '體重正常'
+                        color = 'yellow'
+
+                    } else (bmi < 30){
+                        comment = '輕度肥胖'
+                        color = 'pink'
+
+                    }
+                    commentE1.innerHTML = '<h3 style="color:${color}"> ${comment} </h3>`;
+                   
+
+
+                    // querySelector 搜尋數值
+                    let heightE1 = document.querySelector("#userhigh");
+                    let weightE1 = document.querySelector("#userweight");
+                    let butttonE1 = docummt.querySelector("button");
+                    let resultE1 = docummt.querySelector("#result");
+                    let commentE1 = docummt.querySelector("#comment");
+                    console.log(heightE1.value, weightE1.value, butttonE1.value, resultE1);
+                    // 計算bmi
+
+                    // let bmi = weightE1.value / (heightE1.value / 100)**2;
+                    // alert(`BMI:${ bmi.toFixed(2) }`)
+
+                }
+
+
+
+
+            </script>
 </body>
 
 </html>
